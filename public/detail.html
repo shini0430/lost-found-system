@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Details | Lost & Found</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/api.js" defer></script>
+    <script src="js/detail.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="det-title">Loading Details...</h1>
+            <div id="status-container" style="text-align: center; margin-bottom: 20px;"></div>
+        </header>
+
+        <main id="detail-content">
+            <!-- Data will be injected here safely by detail.js -->
+            <p style="text-align: center;">Retrieving record from database...</p>
+        </main>
+
+        <hr>
+
+        <!-- Action Buttons (Hidden until data is loaded) -->
+        <div id="actions" class="nav-btns hidden">
+            <button id="btn-resolve" class="btn btn-success">Mark as Resolved</button>
+            <button id="btn-delete" class="btn btn-danger">Delete Report</button>
+            <a href="index.html" class="btn btn-outline">Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
