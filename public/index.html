@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found | University Portal</title>
+    <!-- Link to the attractive CSS we created -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+    <!-- New wrapper for logo and title -->
+    <div>
+        <h1>Campus Lost & Found</h1>
+    </div>
+    <p class="subtitle">Quest International University official portal to report and recover items.</p>
+        </header>
+
+        <main>
+            <!-- Navigation Section -->
+            <div class="nav-btns">
+                <!-- We pass 'type' in the URL so list.html knows what to show -->
+                <a href="list.html?type=Lost" class="btn btn-primary">
+                    Browse Lost Items
+                </a>
+                <a href="list.html?type=Found" class="btn btn-outline">
+                    Browse Found Items
+                </a>
+            </div>
+
+            <hr>
+
+            <!-- Action Section -->
+            <div style="text-align: center; margin-top: 20px;">
+                <p style="margin-bottom: 20px; font-weight: 500;">Did you lose or find something today?</p>
+                <a href="add.html" class="btn btn-success" style="font-size: 1.1rem; padding: 15px 40px;">
+                    + Create New Report
+                </a>
+            </div>
+        </main>
+
+        <footer style="margin-top: 50px; text-align: center; font-size: 0.85rem; color: var(--text-muted);">
+            <p>&copy; 2026 University Student Services. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

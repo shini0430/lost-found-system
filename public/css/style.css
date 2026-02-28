@@ -1,0 +1,213 @@
+/* Modern Color Palette */
+:root {
+    --primary: #1e40af;       /* Deep University Blue */
+    --primary-light: #dbeafe; /* Soft Blue highlight */
+    --accent: #f59e0b;        /* Attention Gold */
+    --success: #10b981;       /* Emerald Green */
+    --danger: #ef4444;        /* Vivid Red */
+    --text-main: #1e293b;     /* Slate Dark */
+    --text-muted: #64748b;    /* Slate Gray */
+    --bg-body: #f1f5f9;       /* Light Cool Gray (Fallback) */
+    --white: #ffffff;
+    --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Base Setup */
+* {
+    box-sizing: border-box;
+}
+
+body { 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    
+    /* BACKGROUND IMAGE SETTINGS */
+    background: linear-gradient(rgba(30, 64, 175, 0.2), rgba(30, 64, 175, 0.2)), 
+                url('sea.gif'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: var(--bg-body);
+
+    margin: 0; 
+    padding: 0; 
+    color: var(--text-main);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Layout Container */
+.container { 
+    max-width: 900px; 
+    margin: 60px auto; 
+    background: rgba(255, 255, 255, 0.95); 
+    padding: 40px; 
+    border-radius: 20px; 
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3); 
+    backdrop-filter: blur(10px); 
+}
+
+/* Header & Titles */
+h1 { 
+    color: var(--primary); 
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-align: center; 
+    margin-bottom: 10px;
+    letter-spacing: -0.025em;
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    font-weight: 500;
+}
+
+/* Navigation & Buttons */
+.nav-btns { 
+    display: flex; 
+    gap: 12px; 
+    justify-content: center; 
+    margin-bottom: 30px; 
+}
+
+.btn { 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 12px; 
+    cursor: pointer; 
+    text-decoration: none; 
+    font-size: 14px; 
+    font-weight: 600;
+    transition: all 0.3s ease-in-out; /* Smooth transition for the glow */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- GLOWING HOVER EFFECTS --- */
+
+/* Primary Glow (Blue) */
+.btn-primary:hover {
+    background: #2563eb; /* Slightly brighter blue */
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(37, 99, 235, 0.6), 
+                0 0 30px rgba(37, 99, 235, 0.4);
+}
+
+/* Success Glow (Green) */
+.btn-success:hover {
+    background: #10dc9e; /* Brighter green */
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.6), 
+                0 0 30px rgba(16, 185, 129, 0.4);
+}
+
+/* Danger Glow (Red) */
+.btn-danger:hover {
+    background: #ff4d4d; /* Brighter red */
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.6), 
+                0 0 30px rgba(239, 68, 68, 0.4);
+}
+
+/* Outline Glow */
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(30, 64, 175, 0.5);
+}
+
+/* Default Colors */
+.btn-primary { background: var(--primary); color: white; }
+.btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
+.btn-danger { background: var(--danger); color: white; }
+.btn-success { background: var(--success); color: white; }
+
+/* Item Cards */
+.card { 
+    border: 1px solid #e2e8f0; 
+    padding: 24px; 
+    margin-bottom: 20px; 
+    border-radius: 14px; 
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 20px rgba(30, 64, 175, 0.1);
+    transform: scale(1.02);
+}
+
+.card h3 {
+    margin: 0 0 8px 0;
+    font-size: 1.3rem;
+    color: var(--primary);
+}
+
+.card-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 15px;
+}
+
+/* Status Badges */
+.status-badge { 
+    align-self: flex-start;
+    padding: 4px 14px; 
+    border-radius: 9999px; 
+    font-size: 11px; 
+    text-transform: uppercase;
+    font-weight: 700; 
+    margin-bottom: 12px;
+}
+
+.status-Active { background: var(--primary-light); color: var(--primary); }
+.status-Claimed, .status-Resolved { background: #d1fae5; color: #065f46; }
+
+/* Form Design */
+.form-group { margin-bottom: 24px; }
+label { 
+    display: block; 
+    margin-bottom: 8px; 
+    font-weight: 600; 
+    font-size: 0.95rem;
+}
+
+input, textarea, select { 
+    width: 100%; 
+    padding: 14px 16px; 
+    border: 2px solid #e2e8f0; 
+    border-radius: 12px; 
+    font-size: 1rem;
+    transition: all 0.2s;
+    background-color: #f8fafc;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(30, 64, 175, 0.1);
+}
+
+textarea { resize: vertical; min-height: 120px; }
+
+/* Utilities */
+.hidden { display: none !important; }
+hr { border: 0; border-top: 2px solid #f1f5f9; margin: 35px 0; }
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container { margin: 15px; padding: 25px; }
+    .nav-btns { flex-direction: column; }
+    .btn { width: 100%; }
+}
