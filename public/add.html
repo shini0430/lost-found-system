@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Item | Lost & Found</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/api.js" defer></script>
+    <script src="js/form.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>New Report</h1>
+            <p class="subtitle">Please provide accurate details to help with recovery.</p>
+        </header>
+
+        <form id="report-form">
+            <div class="form-group">
+                <label for="category">Category *</label>
+                <select id="category" required>
+                    <option value="Lost">I Lost Something</option>
+                    <option value="Found">I Found Something</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="title">Item Title *</label>
+                <input type="text" id="title" maxlength="100" placeholder="e.g., Blue Hydroflask, Sony Headphones" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Detailed Description *</label>
+                <textarea id="description" placeholder="Mention color, brand, or specific markings..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="e.g., Library Level 2, Room 402">
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date Lost/Found</label>
+                <input type="date" id="date">
+            </div>
+
+            <div class="form-group">
+                <label for="contact_info">Your Contact Info *</label>
+                <input type="text" id="contact_info" placeholder="Email or Phone Number" required>
+            </div>
+
+            <div class="nav-btns" style="margin-top: 30px;">
+                <a href="index.html" class="btn btn-outline">Cancel</a>
+                <button type="submit" class="btn btn-primary">Submit Report</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

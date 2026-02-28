@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List | Lost & Found</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Performance: Defer loading JS to prevent render-blocking -->
+    <script src="js/api.js" defer></script>
+    <script src="js/list.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="list-title">Items</h1>
+            <div class="nav-btns">
+                <a href="index.html" class="btn btn-outline">← Back Home</a>
+                <a href="add.html" class="btn btn-primary">+ Add New</a>
+            </div>
+        </header>
+
+        <!-- This is where the JavaScript will inject the item cards -->
+        <div id="items-container">
+            <div style="text-align: center; padding: 40px;">
+                <p>Loading items from the university database...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
